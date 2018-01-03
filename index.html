@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./dist/css/style.css">
+</head>
+<body>
+    <!-- font-awesome 是一个技能点，解决特定问题
+    有可能10%的页面，所以要做到按需加载 需要时单独加一下 http数 单独打包
+    dist/bundle.js-->
+    <!-- normalize不是一定要打包的
+    是不是整站开发，打包的比较多
+    模块式的开发，很多个/dist目录
+    对于通用性的模块不要乱打包，导致资源的重复加载 -->
+    <div id="app" class="container">
+        <!-- mvvm 框架支持 vue react  -->
+        <div class="todo-wrapper">
+            <div class="todo-header">     
+                <div class="overlay"></div>
+                <!-- 存放日期  -->
+                <time class="clearfix">
+                    <span class="day">2</span>
+                    <span class="dayofweek">周二</span>
+                    <span class="month">1,2018</span>
+                </time>
+                <div class="add-circle">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </div>
+        </div>
+       
+        <div class="todo-content">
+            <!-- <todo-repaort></todo-repaort> -->
+            <div class="todo-content-title">
+                <h2>Your tasks</h2>
+                <p class="task-report">
+                    <span class="task-remain">0 完成</span> / 3 (任务)
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
